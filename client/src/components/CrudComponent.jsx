@@ -16,7 +16,7 @@ const CRUDComponent = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:4000/api/products/");
+      const response = await axios.get("https://app-api-server.vercel.app/api/products/");
       setProducts(response.data);
     } catch (error) {
       console.error(error);
@@ -25,7 +25,7 @@ const CRUDComponent = () => {
 
   const createProduct = async () => {
     try {
-      await axios.post("http://localhost:4000/api/products/", {
+      await axios.post("https://app-api-server.vercel.app/api/products/", {
         name,
         price,
         stock,
@@ -40,7 +40,7 @@ const CRUDComponent = () => {
 
   const updateProduct = async (productId) => {
     try {
-      await axios.put(`http://localhost:4000/api/products/${productId}`, {
+      await axios.put(`https://app-api-server.vercel.app/api/products/${productId}`, {
         name,
         price,
         stock,
@@ -55,7 +55,7 @@ const CRUDComponent = () => {
 
   const deleteProduct = async (productId) => {
     try {
-      await axios.delete(`http://localhost:4000/api/products/${productId}`);
+      await axios.delete(`https://app-api-server.vercel.app/api/products/${productId}`);
       fetchProducts();
     } catch (error) {
       console.error(error);
