@@ -1,11 +1,9 @@
 import CrudComponent from "./components/CrudComponent";
-import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <CrudComponent />
-      <Footer />
     </>
   );
 }
